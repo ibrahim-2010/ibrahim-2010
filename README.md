@@ -1,86 +1,83 @@
-# Ibrahim Jinadu – DevOps & Cloud Infrastructure Engineer
+## About Me
 
-**7+ years** building and operating production AWS infrastructure. I specialise in EKS platform engineering, DevSecOps pipelines, and GitOps delivery. Currently open to **DevOps Engineer · SRE · Platform Engineer · Cloud Infrastructure Engineer** roles – remote or hybrid.
+**I'm currently working on:**
+Building production-grade DevSecOps platforms on AWS EKS – including an AI-powered SRE incident response agent (Operator Copilot) that connects to live Kubernetes clusters via the Model Context Protocol, diagnoses production incidents, and executes remediations only after a human approves.
 
-📍 &nbsp;[linkedin.com/in/ibrahim-jinadu-2388b73b8](https://www.linkedin.com/in/ibrahim-jinadu-2388b73b8/) &nbsp;|&nbsp; 🏅 &nbsp;AWS Certified Solutions Architect · AWS Cloud Practitioner
+**I'm looking to collaborate on:**
+- **Cloud-native infrastructure projects** – EKS, Terraform, ArgoCD GitOps patterns
+- **DevSecOps pipelines** – supply chain security, policy-as-code, compliance automation
+- **Platform engineering** – internal developer platforms, self-service infrastructure, SRE tooling
+- **AI + infrastructure** – AIOps, LLM-powered operational tooling, MCP integrations
 
----
+**I'm currently learning:**
+- **AegisPipeline** – multi-account AWS landing zone with Cosign/Sigstore image signing, Falco runtime security, and compliance-as-code (SOC 2 / CIS / NIST)
+- **Advanced Kyverno policy authoring** for enterprise admission control
+- **OpenTelemetry** instrumentation across distributed microservices
 
-## 🔧 Core Stack
+**Ask me about:**
+- **AWS EKS platform engineering** – cluster bootstrapping, IRSA, OIDC, node group management
+- **GitOps with ArgoCD** – App-of-Apps pattern, multi-environment rollouts, drift detection
+- **Secrets management** – External Secrets Operator + AWS Secrets Manager via IRSA (zero plaintext in Git)
+- **DevSecOps pipelines** – Jenkins JCasC, SonarQube quality gates, Trivy CVE scanning
+- **Observability stacks** – Prometheus, Grafana, Loki, Tempo, PrometheusRule alerts
+- **FinOps on AWS** – cost audit automation, budget anomaly detection, tag governance
 
-| Domain | Technologies |
-|---|---|
-| **Cloud & IaC** | AWS (EKS, RDS, ElastiCache, ECR, ALB, Route 53, Secrets Manager) · Terraform |
-| **Kubernetes** | EKS · ArgoCD App-of-Apps · Kyverno · External Secrets Operator · Karpenter |
-| **CI/CD** | Jenkins (JCasC) · GitHub Actions · SonarQube · Trivy · Docker · ECR |
-| **Observability** | Prometheus · Grafana · Loki · Tempo · Promtail · AlertManager |
-| **Security** | IRSA · Kyverno admission control · Falco · GuardDuty · Cosign/Sigstore |
-| **Messaging** | Strimzi Kafka (KRaft) · Redis · RabbitMQ |
-| **Languages** | Python · Bash · HCL · YAML |
-
----
-
-## 🚀 Featured Projects
-
-### [NimbusRetail Platform](https://github.com/ibrahim-2010/nimbus-retail-platform)
-Production-grade cloud-native e-commerce platform on AWS EKS. Five microservices (Node.js + Python FastAPI) communicating over HTTP and Kafka. Full GitOps delivery via ArgoCD App-of-Apps. Zero hardcoded credentials – ESO syncs secrets from AWS Secrets Manager via IRSA at pod startup. Kyverno enforces resource limits and blocks privileged containers. Full observability: Prometheus metrics, Loki logs, Tempo traces, five PrometheusRule alerts.
-
-`Terraform` `EKS` `ArgoCD` `Strimzi Kafka` `Kyverno` `ESO + IRSA` `Prometheus` `Loki` `Tempo` `Jenkins JCasC`
-
-> 19 real production issues documented with root cause and fix – not a tutorial.
+**Fun fact:**
+I documented every real production issue I hit while building – 19 in nimbus-retail-platform, 17 in cloud-native-eks, 16 in DevSecOps-Three-Tier-EKS. The troubleshooting logs are in the repos. Real infrastructure breaks in real ways.
 
 ---
 
-### [Operator Copilot](https://github.com/ibrahim-2010/operator-copilot-starter)
-AI-powered SRE first-responder agent built on the Anthropic API and Model Context Protocol. Connects to a live EKS cluster, diagnoses Kafka consumer lag, CrashLoopBackOff, and TLS expiry, then proposes remediations blocked behind a human approval gate. The gate is enforced in the MCP server code – the LLM cannot self-approve. Every tool call is written to an append-only audit log (JSONL). Rate-limited at 20 calls/tool/60s.
+## 🔧 Tech Stack
 
-`Python` `Anthropic API` `MCP` `Kubernetes Python client` `Prometheus AlertManager` `cert-manager`
-
-> 12 tools (8 read-only, 4 mutating). Approval gate enforced in server, not prompt.
-
----
-
-### [Cloud-Native DevSecOps EKS](https://github.com/ibrahim-2010/cloud-native-eks)
-Three-tier app (React + Node.js + PostgreSQL + Redis) on AWS EKS with a fully automated lifecycle. Jenkins JCasC auto-configures 102 plugins, credentials, and pipeline jobs – zero UI clicking. ExternalDNS creates Route 53 records automatically from Ingress annotations. Nine-stage DevSecOps pipeline: SonarQube quality gate → Trivy CVE scan → ECR push → ArgoCD GitOps rollout.
-
-`Terraform` `EKS` `Jenkins JCasC` `ArgoCD` `SonarQube` `Trivy` `ExternalDNS` `Prometheus` `Grafana`
-
-> 17 production issues documented across 4 deployment cycles.
-
----
-
-### [DevSecOps Three-Tier EKS](https://github.com/ibrahim-2010/DevSecOps-Three-Tier-EKS)
-End-to-end DevSecOps pipeline deploying a React + Node.js + MongoDB three-tier application to AWS EKS. Built and validated with 2026 tooling: Jenkins GPG key, Java 21, EBS CSI driver for EKS 1.34, CVSS v4 parser workaround.
-
-`Terraform` `EKS 1.34` `Jenkins` `ArgoCD` `SonarQube` `Trivy` `Prometheus` `Grafana`
-
-> 16 real issues documented – including the upstream OWASP CVSS v4 parser bug.
-
----
-
-### [AWS Cost Optimization](https://github.com/ibrahim-2010/aws-cost-optimization)
-Four-phase FinOps framework deployed against a real AWS environment. Automated audit surfaced an EC2 instance at 0.18% average CPU, unattached EBS volumes, and an orphaned Elastic IP – none visible in the monthly bill. Terraform modules for budget alerts (80/100/120% thresholds + anomaly detection), tag enforcement via AWS Config, and scheduled Lambda shutdown/startup.
-
-`Terraform` `Python (boto3)` `AWS Budgets` `Cost Explorer` `Lambda` `EventBridge` `AWS Config`
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/Argo%20CD-1e0b3e?style=for-the-badge&logo=argo&logoColor=#d16044)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![SonarQube](https://img.shields.io/badge/SonarQube-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
 
-### [Jenkins CI/CD to EKS](https://github.com/ibrahim-2010/cicd_jenkins)
-Six-stage Jenkins pipeline: Maven unit tests → Docker build → DockerHub push → EKS deployment → Prometheus/Grafana monitoring. Full pipeline completes in ~25 seconds. Custom PrometheusRule alerts for PodDown, HighCPU, and CrashLooping – validated live.
+## 🏅 Certifications
 
-`Jenkins` `Maven` `Docker` `EKS` `Prometheus` `Grafana`
+- **AWS Certified Solutions Architect – Associate**
+- **AWS Certified Cloud Practitioner**
 
 ---
 
-## 📊 Experience Snapshot
+## 📌 Featured Projects
 
-| Role | Company | Period |
+| Project | What it does | Stack |
 |---|---|---|
-| Senior SRE Consultant | Technology Excellence Services | Mar 2024 – Present |
-| Site Reliability Engineer | Körber Supply Chain | Dec 2022 – Feb 2024 |
-| DevOps Engineer | Technology Excellence Services | Mar 2019 – Dec 2022 |
-| Linux Systems Administrator | Platinum Group | Jun 2016 – Jan 2019 |
+| [nimbus-retail-platform](https://github.com/ibrahim-2010/nimbus-retail-platform) | Production EKS platform – 5 microservices, Strimzi Kafka, ESO + IRSA secrets, Kyverno policies, full observability | Terraform · ArgoCD · Kafka · Kyverno · Prometheus/Loki/Tempo |
+| [operator-copilot-starter](https://github.com/ibrahim-2010/operator-copilot-starter) | AI SRE agent – diagnoses Kafka lag, CrashLoopBackOff, TLS expiry on live EKS via MCP. Human approval gate enforced in server code | Python · Anthropic API · MCP · Kubernetes client |
+| [cloud-native-eks](https://github.com/ibrahim-2010/cloud-native-eks) | Three-tier app on EKS with Jenkins JCasC (zero UI), ExternalDNS, 9-stage DevSecOps pipeline | Terraform · Jenkins JCasC · ArgoCD · SonarQube · Trivy |
+| [DevSecOps-Three-Tier-EKS](https://github.com/ibrahim-2010/DevSecOps-Three-Tier-EKS) | End-to-end DevSecOps pipeline to EKS 1.34 – built with 2026 tooling, CVSS v4 workaround documented | Terraform · Jenkins · ArgoCD · Trivy · Prometheus |
+| [aws-cost-optimization](https://github.com/ibrahim-2010/aws-cost-optimization) | FinOps framework – automated audit surfaced EC2 at 0.18% CPU, orphaned EIPs. Budget alerts, tag enforcement, Lambda scheduled shutdown | Terraform · Python boto3 · AWS Budgets · EventBridge |
+| [cicd_jenkins](https://github.com/ibrahim-2010/cicd_jenkins) | Jenkins CI/CD to EKS – commit to live deployment in ~25 seconds | Jenkins · Maven · Docker · EKS · Prometheus |
 
 ---
 
-*Open to remote and hybrid opportunities. Connect on [LinkedIn](https://www.linkedin.com/in/ibrahim-jinadu-2388b73b8/) or reach out directly.*
+## 📫 Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ibrahim-jinadu-2388b73b8/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ibrahim-2010)
+
+---
+
+*Open to **DevOps Engineer · SRE · Platform Engineer · Cloud Infrastructure Engineer** roles – remote or hybrid.*
