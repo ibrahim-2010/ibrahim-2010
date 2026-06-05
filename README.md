@@ -50,6 +50,29 @@ I documented every real production issue I hit while building – 19 in nimbus-r
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Ollama](https://img.shields.io/badge/Ollama-%23000000.svg?style=for-the-badge&logo=ollama&logoColor=white)
+![Anthropic Claude](https://img.shields.io/badge/Anthropic%20Claude-%23D97757.svg?style=for-the-badge&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-%23000000.svg?style=for-the-badge&logo=anthropic&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Loki](https://img.shields.io/badge/Loki-%23F7AC3A.svg?style=for-the-badge&logo=grafana&logoColor=white)
+![Tempo](https://img.shields.io/badge/Tempo-OpenTelemetry-%23F46800.svg?style=for-the-badge&logo=opentelemetry&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-%23000000.svg?style=for-the-badge&logo=opentelemetry&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-%231904DA.svg?style=for-the-badge&logo=aquasecurity&logoColor=white)
+![Kyverno](https://img.shields.io/badge/Kyverno-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![External Secrets](https://img.shields.io/badge/External%20Secrets%20Operator-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-%230F1689.svg?style=for-the-badge&logo=helm&logoColor=white)
+![Amazon EKS](https://img.shields.io/badge/Amazon%20EKS-%23FF9900.svg?style=for-the-badge&logo=amazon-eks&logoColor=white)
+![Amazon RDS](https://img.shields.io/badge/Amazon%20RDS-%23527FFF.svg?style=for-the-badge&logo=amazon-rds&logoColor=white)
+![Amazon ECR](https://img.shields.io/badge/Amazon%20ECR-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Amazon ElastiCache](https://img.shields.io/badge/ElastiCache-%23C925D1.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Route 53](https://img.shields.io/badge/Route%2053-%238C4FFF.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+
 
 ---
 
