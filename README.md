@@ -80,4 +80,3 @@ I documented every real production issue I hit while building – 19 in nimbus-r
 
 ---
 
-*Open to **DevOps Engineer · SRE · Platform Engineer · Cloud Infrastructure Engineer** roles – remote or hybrid.*
